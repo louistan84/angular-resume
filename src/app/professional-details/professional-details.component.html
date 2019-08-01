@@ -1,26 +1,12 @@
 <h2>Professional Details</h2>
 <img [src]="imgUrl ? imgUrl : placeholderUrl" (click)="onClickImage()"/>
-<div 
-  [class.highlighted]="details['Name'] === 'John Doe'"
+
+<h4>{{sectionTitle}}</h4>
+<div class="professional-details">
+  <p [class.highlighted]="details['Name'] === 'John Doe'"
   [class.error]="details['Name'] === 'John Doe'"
-  [class.success]="details['Name'] === 'John Doe'"
->
-<span>Name :</span>
-  <span>{{details["Name"]}}</span>
-</div>
-<div>
-  <span>Age :</span>
-  <span>{{details["Age"]}}</span>
-</div>
-<div>
-  <span>Location :</span>
-  <span>{{details["Location"]}}</span>
-</div>
-<div>
-  <span>Experience :</span>
-  <span>{{details["Experience"]}}</span>
-</div>
-<div>
-  <span>Degree :</span>
-  <span>{{details["Degree"]}}</span>
+  [class.success]="details['Name'] === 'John Doe'" *ngFor="let detail of details | keyvalue" >
+    {{detail.key}}
+    <span> : {{detail.value}}</span>
+  </p>  
 </div>

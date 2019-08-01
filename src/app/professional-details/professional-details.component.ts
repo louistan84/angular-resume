@@ -12,10 +12,9 @@ export class ProfessionalDetailsComponent implements OnInit {
     "Location": "Rome, Italy",
     "Experience": "15 years",
     "Degree": "MBA",
-    "imgUrl": "https://ggrmlawfirm.com/wp-content/uploads/avatar-placeholder.png"
   }
 
-  imgUrl = null
+  imgUrl = "https://ggrmlawfirm.com/wp-content/uploads/avatar-placeholder.png"
   placeholderUrl = "https://via.placeholder.com/150"
 
   constructor() { }

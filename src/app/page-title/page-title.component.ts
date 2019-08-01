@@ -16,8 +16,14 @@ export class PageTitleComponent implements OnInit {
   }
 
   onClick() {
+  
+    if (this.btnText = "Edit Resume") {
     this.btnText = "Save Changes"
-    this.btnColor = "green"
+    this.btnColor = "green"}
+    else {
+      this.btnText = "Edit Resume"
+      this.btnColor = "blue"
+    }
   }
 
 
